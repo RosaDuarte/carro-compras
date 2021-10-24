@@ -1,0 +1,50 @@
+[
+    {
+      "precio": 9,
+      "id": 1,
+      "title": "Pizza",
+      "thumbnailUrl": "https://cdn.pixabay.com/photo/2017/12/10/14/47/pizza-3010062_960_720.jpg"
+    },
+    {
+      "precio": 8,
+      "id": 2,
+      "title": "Hamburguesa",
+      "thumbnailUrl": "https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_960_720.jpg"
+    },
+    {
+      "precio": 4,
+      "id": 3,
+      "title": "Café",
+      "thumbnailUrl": "https://cdn.pixabay.com/photo/2015/10/12/14/54/coffee-983955_960_720.jpg"
+    },
+    {
+      "precio": 1,
+      "id": 4,
+      "title": "Agua",
+      "thumbnailUrl": "https://cdn.pixabay.com/photo/2012/03/01/00/31/water-19659_960_720.jpg"
+    },
+    {
+      "precio": 6,
+      "id": 5,
+      "title": "Torta",
+      "thumbnailUrl": "https://cdn.pixabay.com/photo/2016/11/22/23/35/birthday-1851191_960_720.jpg"
+    },
+    {
+      "precio": 1,
+      "id": 6,
+      "title": "Galletas",
+      "thumbnailUrl": "https://cdn.pixabay.com/photo/2016/12/06/15/26/cookies-1886760_960_720.jpg"
+    },
+    {
+      "precio": 7,
+      "id": 7,
+      "title": "Espagueti",
+      "thumbnailUrl": "https://cdn.pixabay.com/photo/2021/09/20/06/55/spaghetti-6639970_960_720.jpg"
+    },
+    {
+      "precio": 12,
+      "id": 8,
+      "title": "Carne",
+      "thumbnailUrl": "https://cdn.pixabay.com/photo/2016/03/05/23/02/barbecue-1239434_960_720.jpg"
+    }
+  ]
