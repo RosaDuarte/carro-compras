@@ -1,8 +1,7 @@
 <template>
+  <Header />
+  <Specialties />
   <div class="block">
-    <div class="title-block">
-      <h1 class="title is-2 pt-3">Tus compras de comida</h1>
-    </div>  
      <div class="box is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-center">
        <Card
         v-for="producto of productos" :key="producto.id"
@@ -19,13 +18,17 @@ import {useStore} from 'vuex'
 import { computed, onMounted } from '@vue/runtime-core'
 import Card from './components/Card'
 import Compras from './components/Compras'
+import Header from './components/Header'
+import Specialties from './components/Specialties'
 
 
 export default {
   name: 'App',
   components: {
     Card,
-    Compras
+    Compras,
+    Header,
+    Specialties
   },
   setup(){
     const store = useStore()
@@ -42,13 +45,23 @@ export default {
 </script>
 
 <style>
-  html{
+  :root{
+    --beige: #ede7db;
+    --sand: #e8dccc;
+    --dark-beige: #e8dccc;
+    --light-grey: #a7b2b6;
+    --dark-grey: #696d6c;
+    --ocher: #e8c083;
+    --orange: #d27947;
+  }
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  #app{
     width: 100%;
-    background-attachment: fixed;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(./assets/fondo.jpg);
+    font-family: 'Roboto', sans-serif;
   }
   body{
     font-family: Helvetica, sans-serif;
