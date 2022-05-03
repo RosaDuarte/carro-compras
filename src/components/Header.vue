@@ -2,60 +2,33 @@
 <div class="parent-container">
   <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="https://bulma.io">
-      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+    <a class="navbar-item" href="#">
+      <img src="@/assets/restaurant.png" width="40" height="28">
     </a>
 
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu" @click="makeBurger">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </a>
   </div>
 
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item">
-        Home
-      </a>
-
-      <a class="navbar-item">
-        Documentation
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More
-        </a>
-
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            About
-          </a>
-          <a class="navbar-item">
-            Jobs
-          </a>
-          <a class="navbar-item">
-            Contact
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            Report an issue
-          </a>
-        </div>
-      </div>
-    </div>
+  <div id="navMenu" class="navbar-menu" :class="{ 'is-active': activator }">
 
     <div class="navbar-end">
       <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary">
-            <strong>Sign up</strong>
+          <a class="" href="#location">
+            Ubicación
           </a>
-          <a class="button is-light">
-            Log in
+          <a class="" href="#menu">
+            Menú
           </a>
-        </div>
+          <a class="" href="#shopping">
+            Tu compra
+          </a>
+          <a class="" href="#contact">
+            Contacto
+          </a>
       </div>
     </div>
   </div>
@@ -73,7 +46,21 @@
 </template>
 
 <script>
-
+  export default{
+    name: 'Navbar',
+    data () {
+      return {
+        msg: '',
+        activator: false
+      }
+    },
+    methods: {
+      makeBurger () {
+        this.activator = !this.activator
+        return this.activator
+      }
+    }
+  }
 </script>
 
 
@@ -85,7 +72,9 @@
     .navbar{
         background: transparent;
     }
-    
+    .navbar-brand{
+      padding-left: 10px;
+    }
     .header-container{
         width: 100%;
         height: 400px;
@@ -112,7 +101,7 @@
     .title h1{
       font-family: 'Open Sans', sans-serif;
       color: #fff;
-      font-size: 35px;
+      font-size: 45px;
       font-weight: 800;
     }
     .title p{
@@ -120,5 +109,27 @@
       color: var(--dark-grey);
       margin-top: 8px;
     }
-    
+    .navbar-item a{
+      margin: 5px;
+      color: var(--dark-grey);
+      font-weight: 700;
+    }
+    .navbar-item a:hover{
+      color: var(--orange);
+      transition: color 0.4s;
+    }
+    .navbar-item{
+      padding: 0;
+    }
+    .is-active .navbar-item{
+      display: flex;
+      flex-direction: column;
+      background-color: var(--dark-beige);
+      padding-top: 0;
+    }
+    @media (min-width: 1024px) {
+      .navbar-end{
+        padding-right: 10px;
+      }
+    }
 </style>

@@ -1,7 +1,9 @@
 <template>
   <Header />
   <Specialties />
+  <Location />
   <div class="block">
+    <h2>Menú</h2>
      <div class="box is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-center">
        <Card
         v-for="producto of productos" :key="producto.id"
@@ -10,7 +12,7 @@
      </div>
      <Compras />
   </div>
- 
+ <Contact />
 </template>
 
 <script>
@@ -20,6 +22,8 @@ import Card from './components/Card'
 import Compras from './components/Compras'
 import Header from './components/Header'
 import Specialties from './components/Specialties'
+import Location from './components/Location'
+import Contact from './components/Contact'
 
 
 export default {
@@ -28,7 +32,9 @@ export default {
     Card,
     Compras,
     Header,
-    Specialties
+    Specialties,
+    Location,
+    Contact
   },
   setup(){
     const store = useStore()
@@ -46,6 +52,7 @@ export default {
 
 <style>
   :root{
+    --body: #faf8f4;
     --beige: #ede7db;
     --sand: #e8dccc;
     --dark-beige: #e8dccc;
@@ -62,6 +69,7 @@ export default {
   #app{
     width: 100%;
     font-family: 'Roboto', sans-serif;
+    background-color: var(--body);
   }
   body{
     font-family: Helvetica, sans-serif;
@@ -79,6 +87,27 @@ export default {
   }
   .box{
     background-color: transparent;
+  }
+  .block h2{
+    margin-top: 25px;
+    color: var(--orange);
+    font-size: 35px;
+    font-weight: 500; 
+  }
+  ::-webkit-scrollbar {
+    width: 10px;      
+    background-color: var(--body);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--ocher);
+    border-radius: 8px;  
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 4px;
+    height: 5px;
   }
 
   @media (min-width:1216px) and (max-width:1407px) {

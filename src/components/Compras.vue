@@ -1,7 +1,7 @@
 <template>
-  <div class="table-container">
+  <div class="table-container" id="shopping">
       <div class="title-container block">
-          <h4 class="title is-3">Carrito de compras</h4>
+          <h2 class="title is-3">Tu compra</h2>
       </div>
       <table class="table is-size-5" id="table">
           <thead>
@@ -50,26 +50,28 @@ export default {
 
 <style scope>
     .table-container{
-        text-align: center;             
+        text-align: center;  
+        background-color: var(--sand); 
+        padding-bottom: 55px;   
+        height: auto;       
     }
     .title-container{
-        background-color: rgba(58, 91, 109, .5);
         padding-bottom: 10px;
         padding-top: 10px;
     }
-    .table-container h4{
-        -webkit-text-fill-color: #d4ceb3;
-        margin: auto;
-        border-radius: 5px;
+    .table-container h2{
+        color: var(--orange);
+        font-size: 35px;
+        font-weight: 500;
     }
     table{
         margin: auto;  
-        font-family: Helvetica, sans-serif;
         width: 60%;
+        border-radius: 8px;
     }
     #table{
-       background-color: rgba(255, 251, 244, .4);
+       background-color: var(--ocher);
        border-radius: 5px;
-       color: #004b67;   
+       color: var(--dark-grey); 
     }
 </style>

@@ -1,5 +1,5 @@
 <template>
-<div class="block m-2">
+<div class="block m-2" id="menu">
     <div class="card">
         <div class="card-image">
               <img :src="producto.thumbnailUrl" :alt="`imagen-${producto.title}`">
@@ -30,42 +30,48 @@ export default {
 
 <style scoped>
     .block{
-        border-radius: 5px;
-        font-family: Helvetica, sans-serif;
+        border-radius: 8px;
+    }
+    h2{
+        color: var(--orange);
+        font-size: 28px;
+        font-weight: 500;
     }
     .card{
-        background-color: rgba(255, 255, 255, .8);
+        background-color: var(--ocher)
     }
     img{
         width: 220px;
-        height: 180px;
+        height: 220px;
+        object-fit: cover;
     }
     h5{
-        color: #191934;
+        color: var(--dark-grey);
+        font-weight: 300;
     }
     p{
-        color: #004b67;
+        color: var(--dark-grey);
         font-size: 20px;
-        font-family: Helvetica, sans-serif;
+        font-weight: 500;
     }
     .button{
-        font-weight: bold;
-        background-color: #191934;
-        border: 1px solid #004b67;
-        color: #d4ceb3;
+        font-weight: 700;
+        background-color: var(--sand);
+        border: 2px solid var( --orange);
+        color: var(--dark-grey);
         font-size: 15px;
-        font-family: Helvetica, sans-serif;
         position: relative;
         z-index: 1;
         overflow: hidden;
         display: inline-block;
+        border-radius: 150px;
     }
     .button:hover{
-        color:#d4ceb3 ;
+        color:var(--orange);
     }
     .button::after{
         content: "";
-        background: #004b67; /* color de fondo hover */
+        background: var(--light-grey); /* color de fondo hover */
         position: absolute;
         z-index: -1;
         padding: 16px 20px;
